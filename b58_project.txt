@@ -1,0 +1,110 @@
+CSCB58 Project File: Summer 2017
+
+Team Member A
+-------------
+First Name: Jeffrey
+Last Name: So
+Student Number: 1003197104
+UofT E-mail Address: jeffsh.so@mail.utoronto.ca
+
+
+Team Member B
+-------------
+First Name: Ricky
+Last Name: Chen
+Student Number: 1003193876
+UofT E-mail Address: utsc.chen@mail.utoronto.ca
+
+Team Member C
+-------------
+First Name: Brandon
+Last Name: Shewnarain
+Student Number:1001515835
+UofT E-mail Address: brandon.shewnarain@mail.utoronto.ca
+
+Team Member D
+-------------
+First Name: Byron
+Last Name:Leung
+Student Number:1002489933
+UofT E-mail Address:byron.leung@mail.utoronto.ca
+
+Project Details
+---------------
+Project Title: 
+Tentative
+
+Project Description:
+Knock off version of Bubble trouble:
+- Player spawns at the bottom of the screen, can only move left/right
+- Player can shoot projectiles only up
+- Enemy (Bubble) spawns somewhere and bounces around the screen
+- Projectile hit = enemy hp down? or score++
+- Enemy bounces into player = gameover or life-- (3 lives?)
+- Extra features: switches change what the enemy looks like? not sure yet
+
+Video URL:
+
+Code URL (please upload a copy of this file to your repository at the end of the project as well, it will
+serve as a useful resource for future development):
+
+
+Proposal
+--------
+
+What do you plan to have completed by the end of the first lab session?:
+Enemy bounce around
+Player spawn, player movement, player shoot
+
+What do you plan to have completed by the end of the second lab session?:
+Finish what wasnt done from part 1
+Projectile to enemy calculations
+Enemy to player calculations
+Scoring
+Lives?
+
+What do you plan to have completed by the end of the third lab session?:
+Be done
+
+What is your backup plan if things don't work out as planned?
+As a backup plan we may need to remove some features that don't work and focus on simpler things. If we have time afterwards , we can try to re-implement them
+
+What hardware will you need beyond the DE2 board 
+(be sure to e-mail Brian if it's anything beyond the basics to make sure there's enough to go around)
+I think just the board and VGA monitor is enough. If we have enough time we might try to use some hardware to simulate the movement e.g. the joystick to move left and right
+but for now, just the board and VGA
+
+Motivations
+-----------
+How does this project relate to the material covered in CSCB58?:
+We are coding in verilog, utilizing counters and displaying pixels like in the lab
+
+Why is this project interesting/cool (for CSCB58 students, and for non CSCB58 students?):
+Its a fun game to play.
+
+Why did you personally choose this project?:
+Its a fun game to play.
+
+Attributions
+------------
+Provide a complete list of any external resources your project used (attributions should also be included in your
+code).  
+
+Updates
+-------
+March 11 - Start of the project: team formed, idea for the project chosen, features of implementation decided, started coding.
+
+March 13 - First practical lab, looked through and attempted to use the layout of code form previous project source code. However after failing to understand the structure and uncommented code we decided to build our own code from scratch. Successfully implemented movement (left/right) but not erasing so it looks like a line.
+
+March 20 part1 - Gathered at MakerSpace for 2hr30m to continue implementing and testing basic maneuver implementations and drawing the player sprite to be 3x3 blocks large.
+
+March 20 part2 - Second practical lab, picked up where we left off at the MakerSpace and implemented 3x3 player sprite as well as flushed out movement (left/right). adjusted clock/rate divider speeds in order to get smoother transitions. Implemented enemy module for enemy sprites size/automatic movement.
+
+March 27 - Third practical lab, successfully added more characteristics to our main character so it doesnt look like just a plain square. Synced our drawing/erasing states to match "MOST" screen resolutions (since every vga monitor seems to have a different resolution each time we connect). Since our code is modular, we are able to instantiate multiple enemies as per TA request to make the game seem harder. Successfully implemented projectile player uses to shoot enemies, we set it so only 1 bullet can be fired at a time (just like in the game), however at first the bullet would not reset when the fire key was held down and the bullet would be instantiated inside the player when the game starts therefore there is a lingering bullet hitbox when the game begins. However we cleaned up the logic and bullet logic works as intended. Implemented and flushed out calculations for projectile-to-enemy collision and enemy-to-player collision. Added colour change feature when enemies are hit to indicate how many lives the enemy has left. Once a certain colour is achieved, the player wins the game. Previously when we reset the game, we don't clear the screen and just wait for the automatic draw/erase/redraw sequence of the gameplay to clean it, but we changed it to clean the screen at the start of every game (reset or gameover). Added when player gets killed, game pauses indicating game over.
+
+
+Apr 3 - Final lab, preperations done for this lab included implementation of multiple levels and level choice through switches, instantiated more enemies with an attribute such that when certain levels are chosen, only a selected amount of enemies spawn, i.e at lvl 1, only 2 big slow enemies spawn, but at max lvl (7), 5 enemies with varying sizes and speeds spawn. Upon first test, bit refresh rate was extremely poor and choppy, so we used the 1 hour pre-presentation time to fix it. It now runs smooth(-ish). Added hex display to show what level player is playing on. Filmed video.
+
+Link to Video: https://youtu.be/pJTQkxYmA28
+
+Link to Git/Code: https://github.com/leungbyr/cscb58-project.git
